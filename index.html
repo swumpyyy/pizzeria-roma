@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tonda — Pizzeria romana a Roma</title>
+  <meta name="description" content="Pizza romana sottile e croccante, focacce farcite, cucina e vini. Guarda il menu e prenota un tavolo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#menu">Vai al menu</a>
+
+  <nav class="nav" aria-label="Principale">
+    <div class="nav__side nav__side--l">
+      <a class="nav__link" href="#focacce">Focacce</a>
+      <a class="nav__link" href="#menu" data-tab="cucina">Cucina</a>
+      <a class="nav__link" href="#menu" data-tab="vini">Vini</a>
+    </div>
+    <a class="logo" href="#top" aria-label="Tonda, torna all'inizio">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#d62828" stroke-width="2.5"/>
+        <circle cx="9" cy="10" r="1.6" fill="#fff"/>
+        <circle cx="14.5" cy="9" r="1.6" fill="#fff"/>
+        <circle cx="12.5" cy="15" r="1.6" fill="#fff"/>
+      </svg>
+      Tonda
+    </a>
+    <div class="nav__side nav__side--r">
+      <a class="nav__link" href="#menu" data-tab="drink">Cocktail</a>
+      <a class="nav__link" href="#contatti">Contatti</a>
+      <a class="pill pill--red" href="#contatti">Prenota</a>
+      <a class="pill pill--white" href="#menu">Menu</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ───── Scena: pizza esplosa guidata dallo scroll ───── -->
+    <section class="scene" id="top" aria-label="La Margherita Romana">
+      <div class="stage">
+        <div class="beam" aria-hidden="true"></div>
+
+        <header class="hero-copy">
+          <p class="eyebrow">La preferita della settimana</p>
+          <h1>Margherita Romana</h1>
+          <p class="sub">Sottile, croccante, come si fa a Roma.<br> Pomodoro Datterino, fior di latte di Agerola e basilico fresco.</p>
+        </header>
+        <p class="scroll-cue" aria-hidden="true">Scorri</p>
+
+        <div class="deco deco--tl"><img src="assets/leaf.webp" alt=""></div>
+        <div class="deco deco--tr"><img src="assets/leaf.webp" alt=""></div>
+        <div class="deco deco--bl"><img src="assets/leaf.webp" alt=""></div>
+        <div class="deco deco--br"><img src="assets/leaf.webp" alt=""></div>
+
+        <!-- Strati ed etichette li crea js/main.js dall'array LAYERS -->
+        <div class="pizza-pos">
+          <div class="pizza"><div class="pizza__floor"></div></div>
+          <ul class="labels" aria-label="Ingredienti"></ul>
+        </div>
+
+        <!-- SEGNAPOSTO: prezzo, voto, numero recensioni, diametro, peso e calorie vanno sostituiti con i dati veri -->
+        <div class="offer">
+          <h2>Prova la Margherita<br>Romana oggi</h2>
+          <p class="rating">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="sr-only">Voto</span>
+            <strong>4,8</strong>
+            <span>(320 recensioni)</span>
+          </p>
+          <p class="offer__text">Impasto steso sottile e cotto finché non scrocchia. Sopra: salsa di pomodoro Datterino, fior di latte di Agerola e basilico fresco.</p>
+          <p class="price">12 €</p>
+          <p class="meta">Ø 32 cm · 300 g · 750 kcal</p>
+          <div class="offer__cta">
+            <a class="btn btn--white" href="#menu" data-tab="cucina">Guarda il menu</a>
+            <a class="btn btn--red" href="#contatti">Prenota un tavolo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── Focacce ───── -->
+    <section class="sec" id="focacce">
+      <header class="sec-head">
+        <p class="eyebrow">All day</p>
+        <h2>Focacce alla romana</h2>
+        <p class="sub">Tre farciture, a tutte le ore.</p>
+      </header>
+      <ul class="cards">
+        <li class="card">
+          <img src="assets/focaccia-verdure.webp" width="900" height="675" loading="lazy" alt="Focaccia farcita con verdure a foglia e mozzarella">
+          <h3>Cicoria e fior di latte</h3>
+          <p class="card__text">Focaccia alla romana con cicoria alla romana e mozzarella fior di latte di Agerola.</p>
+          <p class="card__foot"><span class="price">17 €</span><a href="#menu" data-tab="cucina">Vedi nel menu</a></p>
+        </li>
+        <li class="card">
+          <img src="assets/focaccia-pomodoro.webp" width="900" height="675" loading="lazy" alt="Focaccia farcita con pomodoro, basilico, formaggio e pesto">
+          <h3>Crudo, pomodoro e pesto</h3>
+          <p class="card__text">Focaccia alla romana con prosciutto crudo, fior di latte di Agerola, pomodoro e pesto fresco di basilico.</p>
+          <p class="card__foot"><span class="price">17 €</span><a href="#menu" data-tab="cucina">Vedi nel menu</a></p>
+        </li>
+        <li class="card">
+          <img src="assets/focaccia-salumi.webp" width="900" height="675" loading="lazy" alt="Schiacciate farcite con salumi e rucola su un tagliere">
+          <h3>Salame piccante e Brie</h3>
+          <p class="card__text">Focaccia alla romana con salame piccante, rughetta, Brie e crema di peperoni rossi.</p>
+          <p class="card__foot"><span class="price">16 €</span><a href="#menu" data-tab="cucina">Vedi nel menu</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ───── Menu ─────
+         Ogni piatto: .n nome, .p prezzo, .d descrizione, .t variante al tartufo -->
+    <section class="sec" id="menu">
+      <header class="sec-head">
+        <p class="eyebrow">Cucina, vini, cocktail</p>
+        <h2>Il menu</h2>
+      </header>
+
+      <div class="tabs" role="group" aria-label="Sezioni del menu">
+        <button type="button" data-tab="cucina" aria-pressed="true">Cucina</button>
+        <button type="button" data-tab="vini" aria-pressed="false">Vini</button>
+        <button type="button" data-tab="drink" aria-pressed="false">Cocktail e birre</button>
+      </div>
+
+      <div class="menu__group" id="cucina">
+        <section class="cat">
+          <h3>Antipasti <span lang="en">Starters</span></h3>
+          <ul>
+            <li><span class="n">Caprese ai tre pomodori, burrata di Andria e basilico</span><span class="p">15 €</span><span class="d" lang="en">Three Cherry tomatoes, Andria burrata cheese and basil leaves</span></li>
+            <li><span class="n">Bigné di baccalà mantecato con salsa yogurt alle erbe</span><span class="p">14 €</span><span class="d" lang="en">Creamed cod puffs with herbs yogurt sauce</span></li>
+            <li><span class="n">Carpaccio di manzo con rucola e Parmigiano Reggiano</span><span class="p">18 €</span><span class="d" lang="en">Beef carpaccio, rocket salad and Parmigiano Reggiano cheese</span><span class="t">Con tartufo · 33 €</span></li>
+            <li><span class="n">Tagliere di salumi e formaggi italiani</span><span class="p">30 €</span><span class="d" lang="en">Italian cold cuts and cheese selection</span></li>
+            <li><span class="n">Parmigiana di melanzane al forno</span><span class="p">17 €</span><span class="d" lang="en">Baked aubergine Parmigiana</span></li>
+            <li><span class="n">Bruschetta con julienne di zucchine alla menta, olio d'oliva, stracciatella di Andria e gamberi fritti</span><span class="p">17 €</span><span class="d" lang="en">Bruschetta with mint zucchini julienne, olive oil, Andria stracciatella cheese and fried shrimps</span></li>
+            <li><span class="n">Cestino di carciofi croccanti</span><span class="p">16 €</span><span class="d" lang="en">Crispy artichokes basket</span></li>
+            <li><span class="n">Polpette di vitella come i Saltimbocca alla Romana</span><span class="p">16 €</span><span class="d" lang="en">Veal meatballs with butter and sage sauce topped with crunchy ham like Roman-style saltimbocca</span></li>
+            <li><span class="n">Spicchi di focaccia con Mortadella IGP di Bologna, burrata di Andria, tartufo nero di stagione e olio Frantoio Gallotti</span><span class="p">27 €</span><span class="d" lang="en">Focaccia slices with Bologna IGP Mortadella, Andria burrata cheese, seasonal black truffle and Gallotti olive oil</span></li>
+            <li><span class="n">Spicchi di focaccia con stracciatella di Andria, alici del Mar Cantabrico, olio Frantoio Gallotti e scorza di limone</span><span class="p">21 €</span><span class="d" lang="en">Focaccia slices with Andria stracciatella cheese, anchovies from the Cantabrian Sea, Gallotti olive oil and lemon zest</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>All day</h3>
+          <ul>
+            <li><span class="n">Avocado toast</span><span class="p">13 €</span><span class="d" lang="en">Toasted bread, avocado cream and poached egg</span><span class="t">Con tartufo · 28 €</span></li>
+            <li><span class="n">Avocado toast con salmone marinato</span><span class="p">16 €</span><span class="d" lang="en">Toasted bread with avocado cream, poached egg and marinated salmon</span></li>
+            <li><span class="n">Club sandwich</span><span class="p">20 €</span><span class="d" lang="en">Sandwich bread, mayo, lettuce, fresh tomato, slow cooked chicken, bacon, Fontina cheese and french fries side</span></li>
+            <li><span class="n">Focaccia alla Romana con cicoria alla romana e mozzarella fior di latte di Agerola</span><span class="p">17 €</span><span class="d" lang="en">Stuffed Roman-style focaccia with Roman-style sautéed chicory and Agerola fior di latte cheese</span></li>
+            <li><span class="n">Focaccia alla Romana con prosciutto crudo, fior di latte di Agerola, pomodoro e pesto fresco di basilico</span><span class="p">17 €</span><span class="d" lang="en">Stuffed Roman-style focaccia with raw ham, Agerola fior di latte mozzarella cheese, tomato and fresh basil pesto</span></li>
+            <li><span class="n">Focaccia alla Romana con salame piccante, rughetta, Brie e crema di peperoni rossi</span><span class="p">16 €</span><span class="d" lang="en">Stuffed Roman-style focaccia with Italian spicy salami, rocket, Brie cheese and sweet bell pepper cream</span></li>
+            <li><span class="n">Focaccia olio, sale e rosmarino</span><span class="p">10 €</span><span class="d" lang="en">Olive oil, salt and rosemary focaccia bread</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Pasta</h3>
+          <ul>
+            <li><span class="n">Spaghettoni fatti in casa alla Carbonara</span><span class="p">16 €</span><span class="d" lang="en">Homemade spaghetti pasta in Carbonara-style with egg yolk cream, Pecorino Romano cheese, pork cheek and black pepper</span><span class="t">Con tartufo · 31 €</span></li>
+            <li><span class="n">Spaghettoni fatti in casa all'Amatriciana</span><span class="p">16 €</span><span class="d" lang="en">Homemade spaghetti pasta in Amatriciana-style with tomato sauce, pork cheek, Pecorino Romano cheese and black pepper</span></li>
+            <li><span class="n">Spaghettoni fatti in casa Cacio e Pepe</span><span class="p">16 €</span><span class="d" lang="en">Homemade spaghetti pasta in Cacio e Pepe-style</span></li>
+            <li><span class="n">Fettuccine fatte in casa alla Bolognese</span><span class="p">17 €</span><span class="d" lang="en">Homemade fettuccine pasta in Bolognese-style with Italian beef minced meat and tomato sauce</span></li>
+            <li><span class="n">Gnocchi fatti in casa alla Sorrentina con stracciatella di Bufala e basilico</span><span class="p">17 €</span><span class="d" lang="en">Homemade gnocchi pasta in Sorrentina-style with tomato sauce, Buffalo stracciatella cheese and basil</span></li>
+            <li><span class="n">Gnocchi fatti in casa con ragù di polpo al profumo di limone</span><span class="p">23 €</span><span class="d" lang="en">Homemade gnocchi pasta with lemon scented octopus ragout</span></li>
+            <li><span class="n">Spaghettoni fatti in casa con polpette e ricotta salata</span><span class="p">20 €</span><span class="d" lang="en">Homemade spaghetti pasta with mixed minced meatballs in tomato sauce and salty ricotta cheese</span></li>
+            <li><span class="n">Fettuccine fatte in casa all'Alfredo</span><span class="p">20 €</span><span class="d" lang="en">Homemade fettuccine pasta in Alfredo-style with butter and Parmigiano Reggiano cream</span><span class="t">Con tartufo · 35 €</span></li>
+            <li><span class="n">Spaghettoni fatti in casa con salsa di Datterino e crumble di pane al basilico</span><span class="p">23 €</span><span class="d" lang="en">Homemade spaghetti pasta with Datterino tomato sauce and basil bread crumble</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Secondi <span lang="en">Main courses</span></h3>
+          <ul>
+            <li><span class="n">Polpo rosticciato con cicoria alla romana</span><span class="p">26 €</span><span class="d" lang="en">Roasted octopus with Roman-style chicory</span></li>
+            <li><span class="n">Baccalà cotto a bassa temperatura con crema di peperoni dolci e vela di pane artigianale</span><span class="p">29 €</span><span class="d" lang="en">Low-temperature cooked cod with sweet pepper cream and a slice of artisan bread</span></li>
+            <li><span class="n">Trancetto di salmone glassato con soia e miele servito con scarola, uvetta, olive e pinoli</span><span class="p">27 €</span><span class="d" lang="en">Soy and honey-glazed salmon steak served with escarole, raisins, olives and pine nuts</span></li>
+            <li><span class="n">Tagliata di filetto di manzo con spinaci burro e Parmigiano Reggiano</span><span class="p">32 €</span><span class="d" lang="en">Beef fillet with mixed salad with butter and Parmigiano Reggiano cheese spinach</span><span class="t">Con tartufo · 47 €</span></li>
+            <li><span class="n">Tagliata di pollo CBT e misticanza con aceto ai lamponi</span><span class="p">25 €</span><span class="d" lang="en">Slow cooked and grilled chicken and mixed salad with raspberry vinegar</span><span class="t">Con tartufo · 40 €</span></li>
+            <li><span class="n">Polpette della Nonna</span><span class="p">22 €</span><span class="d" lang="en">Grandma's meatballs mixed minced meat with tomato and basil sauce topped with Parmigiano Reggiano</span></li>
+            <li><span class="n">Guancia di vitella, démi-glace e purea di patate</span><span class="p">35 €</span><span class="d" lang="en">Veal cheek, démi-glace and mashed potatoes</span><span class="t">Con tartufo · 50 €</span></li>
+            <li><span class="n">Straccetti di manzo con carciofi e scaglie di Parmigiano Reggiano</span><span class="p">25 €</span><span class="d" lang="en">Beef strips with artichokes and Parmigiano Reggiano cheese</span></li>
+            <li><span class="n">Hamburger di Angus, fontina, pomodoro, insalata, bacon e patatine fritte</span><span class="p">25 €</span><span class="d" lang="en">Angus burger, Fontina cheese, fresh tomato, lettuce, bacon and french fries</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Insalate <span lang="en">Salads</span></h3>
+          <ul>
+            <li><span class="n">Chicken Caesar Salad</span><span class="p">18 €</span><span class="d" lang="en">Caesar salad with grilled chicken, lettuce, bread croutons, Caesar dressing and Parmigiano Reggiano cheese</span></li>
+            <li><span class="n">Insalata Greca</span><span class="p">15 €</span><span class="d" lang="en">Greek salad with Cherry tomatoes, Feta cheese, Tzatziki sauce, bread croutons, olives, fresh onions, capers and cucumber</span></li>
+            <li><span class="n">Insalata con salmone scottato, pomodorini, avocado, mango, mandorle e senape al miele</span><span class="p">25 €</span><span class="d" lang="en">Seared salmon, lettuce, Cherry tomatoes, avocado, mango, almonds and honey mustard</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Contorni <span lang="en">Side dishes</span></h3>
+          <ul>
+            <li><span class="n">Insalata ai tre pomodori e basilico</span><span class="p">9 €</span><span class="d" lang="en">Three Cherry tomatoes and basil salad</span></li>
+            <li><span class="n">Patate Fritte</span><span class="p">9 €</span><span class="d" lang="en">French fries</span></li>
+            <li><span class="n">Cicoria ripassata alla Romana</span><span class="p">9 €</span><span class="d" lang="en">Roman-style sautéed chicory</span></li>
+            <li><span class="n">Misticanza con aceto ai lamponi</span><span class="p">8 €</span><span class="d" lang="en">Mixed salad with raspberry vinegar</span></li>
+            <li><span class="n">Purea di patate</span><span class="p">10 €</span><span class="d" lang="en">Mashed potatoes</span></li>
+            <li><span class="n">Spinaci all'agro</span><span class="p">9 €</span><span class="d" lang="en">Lemon spinach</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="menu__group" id="vini">
+        <section class="cat">
+          <h3>Bollicine</h3>
+          <ul>
+            <li><span class="n">Prosecco extra dry superiore, Merotto</span><span class="p">40 €</span><span class="d">Veneto</span></li>
+            <li><span class="n">Prosecco superiore Rosé, Merotto</span><span class="p">45 €</span><span class="d">Veneto</span></li>
+            <li><span class="n">Franciacorta “Alma”, Bellavista</span><span class="p">70 €</span><span class="d">Lombardia</span></li>
+            <li><span class="n">Franciacorta Rosè, Bellavista</span><span class="p">80 €</span><span class="d">Lombardia</span></li>
+            <li><span class="n">Franciacorta DOCG, Annamaria Clementi Ca' del Bosco</span><span class="p">180 €</span><span class="d">Lombardia</span></li>
+            <li><span class="n">Champagne Rosè, Ruinart</span><span class="p">160 €</span><span class="d">Francia</span></li>
+            <li><span class="n">Champagne Brut Ruinart R</span><span class="p">160 €</span><span class="d">Francia</span></li>
+            <li><span class="n">Champagne Brut Ruinart Blanc De Blanc</span><span class="p">190 €</span><span class="d">Francia</span></li>
+            <li><span class="n">Champagne Brut Cristal Louis Roederer</span><span class="p">450 €</span><span class="d">Francia</span></li>
+            <li><span class="n">Champagne Brut Dom Perignon</span><span class="p">500 €</span><span class="d">Francia</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Vini rosé</h3>
+          <ul>
+            <li><span class="n">Côte de Provence, Château Miraval</span><span class="p">60 €</span><span class="d">Francia</span></li>
+            <li><span class="n">Primitivo del Salento “Tramari”, San Marzano</span><span class="p">38 €</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Vini bianchi <span lang="en">White wines</span></h3>
+          <ul>
+            <li><span class="n">Pinot Grigio 'Feudi di Romans'</span><span class="p">35 €</span><span class="d">Friuli</span></li>
+            <li><span class="n">Sauvignon Sanct Valentin 'St. Michael Eppan'</span><span class="p">75 €</span><span class="d">Alto Adige</span></li>
+            <li><span class="n">Gewurztraminer 'Girlan'</span><span class="p">45 €</span><span class="d">Alto Adige</span></li>
+            <li><span class="n">Sauvignon 'Cormons'</span><span class="p">40 €</span><span class="d">Friuli</span></li>
+            <li><span class="n">Chardonnay 'La Magnolia'</span><span class="p">40 €</span><span class="d">Friuli</span></li>
+            <li><span class="n">Cortese 'Gavi dei Gavi', La Scolca</span><span class="p">65 €</span><span class="d">Piemonte</span></li>
+            <li><span class="n">Chardonnay 'Rossj Bass', Gaia</span><span class="p">110 €</span><span class="d">Piemonte</span></li>
+            <li><span class="n">Chardonnay e Grechetto 'Cervaro Della Sala', Marchesi Antinori</span><span class="p">220 €</span><span class="d">Umbria</span></li>
+            <li><span class="n">Pecorino Bio 'Serranella', Spinelli</span><span class="p">35 €</span><span class="d">Abruzzo</span></li>
+            <li><span class="n">Bellone 'Capolemole', Marco Carpineti</span><span class="p">40 €</span><span class="d">Lazio</span></li>
+            <li><span class="n">Frascati 'Villa Simone', Vigneto Filonardi</span><span class="p">55 €</span><span class="d">Lazio</span></li>
+            <li><span class="n">Fiano d'Avellino 'Exultet', Quintodecimo</span><span class="p">85 €</span><span class="d">Campania</span></li>
+            <li><span class="n">Etna Bianco 'Gamma', Federico Curtaz</span><span class="p">60 €</span><span class="d">Sicilia</span></li>
+            <li><span class="n">Vermentino 'VT', Capichera</span><span class="p">140 €</span><span class="d">Sardegna</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Vini rossi <span lang="en">Red wines</span></h3>
+          <ul>
+            <li><span class="n">Pinot Nero 'Patricia', Girlan</span><span class="p">50 €</span><span class="d">Alto Adige</span></li>
+            <li><span class="n">Lagrein 'Rubatsch', Mannincor</span><span class="p">100 €</span><span class="d">Alto Adige</span></li>
+            <li><span class="n">Barolo DOCG, Ettore Germano</span><span class="p">100 €</span><span class="d">Piemonte</span></li>
+            <li><span class="n">Lambrusco '1831', Otello Ceci</span><span class="p">20 €</span><span class="d">Emilia Romagna</span></li>
+            <li><span class="n">Chianti Docg 0.375, Banfi</span><span class="p">20 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">Chianti Docg, Banfi</span><span class="p">40 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">Chianti Classico, Castello di Ama</span><span class="p">80 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">'Le Volte', Tenuta dell'Ornellaia</span><span class="p">60 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">Bolgheri 'Le serre nuove', Tenuta dell'Ornellaia</span><span class="p">120 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">Brunello di Montalcino 'Pian Delle Vigne', Antinori</span><span class="p">150 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">Valpolicella Ripasso 'Acinatico', Stefano Accordini</span><span class="p">55 €</span><span class="d">Veneto</span></li>
+            <li><span class="n">'Sassicaia' Tenuta San Guido Bolgheri Sassicaia</span><span class="p">450 €</span><span class="d">Toscana</span></li>
+            <li><span class="n">'Tignanello' Marchesi Antinori</span><span class="p">270 €</span><span class="d">Umbria</span></li>
+            <li><span class="n">Montepulciano Bio 'Serranella', Spinelli</span><span class="p">35 €</span><span class="d">Abruzzo</span></li>
+            <li><span class="n">Merlot 'Montiano', Cotarella</span><span class="p">50 €</span><span class="d">Lazio</span></li>
+            <li><span class="n">Cesanese Del Piglio 'Hernicus', Coletti Conti</span><span class="p">50 €</span><span class="d">Lazio</span></li>
+            <li><span class="n">Primitivo 'Il Pumo', San Marzano</span><span class="p">20 €</span><span class="d">Puglia</span></li>
+            <li><span class="n">Etna Rosso 'Il Purgatorio', Federico Curtaz</span><span class="p">60 €</span><span class="d">Sicilia</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="menu__group" id="drink">
+        <section class="cat">
+          <h3>Signature <span lang="en">Cocktails</span></h3>
+          <ul>
+            <li><span class="n">MARCHESE DEL GRILLO</span><span class="p">17 €</span><span class="d" lang="en">Vodka, fresh passion fruit, fresh lime juice and simple syrup</span></li>
+            <li><span class="n">FASHION SPRITZ</span><span class="p">17 €</span><span class="d" lang="en">Aperol Barbieri, pineapple juice, fresh lime juice and mango syrup</span></li>
+            <li><span class="n">BASILISCO</span><span class="p">15 €</span><span class="d" lang="en">St. Germain, fresh basil leaves, fresh lime juice and simple syrup</span></li>
+            <li><span class="n">SO GOOD</span><span class="p">15 €</span><span class="d" lang="en">Tequila, Mezcal, mango syrup, lime juice and salt and pepper crust</span></li>
+            <li><span class="n">FROM BOULEVARD</span><span class="p">15 €</span><span class="d" lang="en">Bourbon whiskey, Zucca rhubarb liqueur, Italian red vermouth and bitter mix</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Analcolici <span lang="en">Alcohol-free</span></h3>
+          <ul>
+            <li><span class="n">FIVE STARS</span><span class="p">13 €</span><span class="d" lang="en">Pineapple juice, coconut syrup, fresh lime juice and ginger ale</span></li>
+            <li><span class="n">CHERRY TEMPLE</span><span class="p">13 €</span><span class="d" lang="en">Grenadine syrup, ginger ale, fresh lime juice and maraschino cherry</span></li>
+            <li><span class="n">NO WAY</span><span class="p">13 €</span><span class="d" lang="en">Gin Tanqueray 00, fresh lime juice, ginger beer and cucumber slice</span></li>
+          </ul>
+        </section>
+
+        <section class="cat">
+          <h3>Birre <span lang="en">Beers</span></h3>
+          <ul>
+            <li><span class="n">SPINA 0.5 CL MESSINA CRISTALLI DI SALE DRAFT</span><span class="p">9 €</span></li>
+            <li><span class="n">ICHNUSA 33CL</span><span class="p">7 €</span></li>
+            <li><span class="n">MORETTI FILTRATA A FREDDO 33CL</span><span class="p">7 €</span></li>
+            <li><span class="n">MORETTI LA ROSSA 33CL</span><span class="p">7 €</span></li>
+            <li><span class="n">BIRRA 101 GLUTEN FREE 33 CL</span><span class="p">10 €</span></li>
+            <li><span class="n">MORETTI 00 - ALCOHOL FREE</span><span class="p">7 €</span></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEGNAPOSTO: telefono e orari da inserire. Le foto delle focacce sono d'archivio: vanno sostituite con quelle del locale -->
+  <footer class="footer" id="contatti">
+    <div>
+      <h2>Ci vediamo a Roma</h2>
+      <p>Per prenotare un tavolo chiamaci o passa a trovarci.</p>
+    </div>
+    <dl>
+      <div><dt>Indirizzo</dt><dd>Via Portuense 347, Roma<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Portuense+347%2C+Roma" target="_blank" rel="noopener">Indicazioni stradali</a></dd></div>
+      <div><dt>Telefono</dt><dd>Da inserire</dd></div>
+      <div><dt>Orari</dt><dd>Da inserire</dd></div>
+    </dl>
+    <iframe class="map" title="Mappa: Via Portuense 347, Roma" src="https://www.google.com/maps?q=Via+Portuense+347,+Roma&amp;z=16&amp;hl=it&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <p class="footer__legal">© 2026 Tonda · Pizzeria romana</p>
+    <p class="footer__legal footer__credits">Foto delle focacce da Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Caprese_Sandwich,_Jolly_Holiday_Bakery_Cafe_2013.jpg">HarshLight</a> (<a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>),
+      <a href="https://commons.wikimedia.org/wiki/File:Sandwich_with_vegan_cheese,_tomatoes_and_basil.jpg">Anna Korcheva</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>),
+      <a href="https://commons.wikimedia.org/wiki/File:Schiacciata_panini_on_display_inside_Il_Mercato_Centrale_Italian_food_hall,_Melbourne.jpg">Philip Mallis</a> (<a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>). Ritagliate.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
