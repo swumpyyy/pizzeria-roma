@@ -45,9 +45,20 @@ h1, h2, h3 {
 }
 .skip:focus { transform: none; }
 
+/* ───── Barra "sito dimostrativo", come nelle altre demo di 146 Solutions ───── */
+.demo-bar {
+  display: flex; justify-content: center; align-items: center; gap: .5em;
+  padding: .55rem clamp(16px, 3vw, 40px);
+  background: #0B1533; color: rgba(244, 241, 234, .85);
+  font-size: 13px; line-height: 1.4; text-align: center;
+}
+.demo-bar a { color: #fff; font-weight: 600; }
+.demo-bar svg { flex: none; width: 1.15em; height: 1.15em; fill: #E8F06A; }
+
 /* ───── Navbar ───── */
 .nav {
-  position: fixed; inset: 0 0 auto; z-index: 50;
+  /* sticky e non fixed: parte sotto la barra demo; il margine negativo la tiene sovrapposta all'hero */
+  position: sticky; top: 0; z-index: 50; margin-bottom: calc(-1 * var(--nav-h));
   height: var(--nav-h);
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px;
   padding: 0 clamp(16px, 3vw, 40px);
@@ -113,7 +124,8 @@ h1, h2, h3 {
 .hero-copy h1 { margin: 10px 0 8px; font-size: min(12.5vw, 27svh); }
 .sub { color: var(--mute); font-size: clamp(14px, 1.15vw, 17px); }
 .scroll-cue {
-  position: absolute; bottom: 3svh; left: 50%; translate: -50% 0; z-index: 1;
+  /* +44px: a inizio pagina la barra demo spinge la scena sotto il bordo dello schermo */
+  position: absolute; bottom: calc(3svh + 44px); left: 50%; translate: -50% 0; z-index: 1;
   color: var(--mute); font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase;
 }
 .scene:not(.is-pinned) .scroll-cue { display: none; }
@@ -237,7 +249,7 @@ h1, h2, h3 {
 .footer p { color: var(--mute); }
 .footer dl { display: grid; gap: 14px; align-content: start; }
 .footer dt { color: var(--mute); font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
-.footer dd a, .footer__credits a { border-bottom: 1px solid var(--red); }
+.footer dd a, .footer__legal a { border-bottom: 1px solid var(--red); }
 .map {
   grid-column: 1 / -1; width: 100%; height: clamp(280px, 42vh, 440px);
   border: 0; border-radius: 20px;
